@@ -1,163 +1,347 @@
-*{
-   padding: 0px;
-   margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Heebo", sans-serif;
+    color: #21243d;
+
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    width: 600px;
-    justify-content: center;
-}
-.left-side{
+
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #163853;
-}
-.photo{
-    width: 150px;
-    height: 150px;
-    border: 2px solid rgb(45, 50, 103);
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 30px;
-}
-.icon{
-    display: inline-block;
-    width: 20px;
+    max-width: 100vw;
+    max-height: 200vh;
     background-color: white;
-    border-radius: 20%;
-    padding: 2px;
+    gap: 40px;
 }
-.info ul li{
-    list-style: none;
-    padding: 5px;
-}
-.text{
-    color: white;
-}
-.skills{
-   margin-top: 20px;
-}
-.skill-item span{
-    display: block;
-    margin: 6px;
-}
-.progress-bar{
-    width: 150px;
-    height: 6px;
-    background-color: #465778;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.progress{
-    height: 100%;
-    background-color: #4192ee;
-    width: 0;
-    border-radius: 5px;
-   
-}
-.lang{
-    margin: 30px;
-}
-.circle{
-    position: relative;
-    width:80px ;
-    height:80px;
-    margin: auto;
-    
-}
-.progress-circle{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: conic-gradient(#4192ee 0% 70%, #4a5b7a 70% 100%);
+
+.nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: right;
+    width: 80%;
+    max-width: 100vw;
+    color: black;
+    font-weight: 500;
+    gap: 20px;
+    padding: 20px 0px;
 }
-.progress-circle::before {
-    content: "English";
-    color: white;
-    background-color: #163853;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
-}
-.right-side{
-    display: flex;
-    flex-direction: column;
-}
-.namePane{
-    text-indent: 30px;
-    align-content: center;
-    height: 180px;
-    background-image: url(pexels-tamanna-rumee-52377920-8823345.jpg);
-    background-size: cover;
-}
-h1{
-    font-size: 50px;
-    font-family: serif;
-}
-h4{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-}
-.icon1{
-    display: inline-block;
-    width: 30px;
-    padding: 5px;
-}
-.topic{
-    display: flex;
-    align-items: center;
-    background-color: rgb(160, 247, 247);
-    margin: 10px 0px
-}
-.topic p{
+
+.nav a {
     font-size: 20px;
+    text-decoration: none;
 }
-.content p{
-    margin: 0px 10px
+
+.nav img {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
 }
-.content div{
-    margin: 5px;
+.nav a:hover{
+    text-decoration: 3px underline;
 }
-/*
-    position: relative;
-    width: 100%;
-    max-width: 100px;
-    min-height: 100px;
-    background-color: blue;
-    margin: 50px;
-    box-shadow: 0 35px 35px rgba(0,0,0,0.1);
-body{
+
+.menu {
+    position: fixed;
+    background-color: #21243d;
+    right: 0px;
+    top: 80px;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.menu img {
+    width: 40px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.menu div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+}
+
+.menu div a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding-bottom: 30px;
+}
+
+.profile {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 40px;
 }
-.container .left-side{
-    position: relative;
-    background-color: #163853;
-    padding: 40px;
+
+.info {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    justify-content: space-between;
+    gap: 30px;
 }
-.profileText{
-    position: relative;
+
+.info h1 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.img img {
+    width: 243px;
+    height: 243px;
+    border: 1px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+button {
+    width: 208px;
+    height: 47px;
+    background-color: #FF6464;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #ffc664;
+}
+button a {
+    text-decoration: none;
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    gap: 30px;
 }
-.photo{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 7px solid white;
-    object-fit: cover;
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 350px;
+    background-color: #EDF7FA;
+    gap: 20px;
 }
-*/
+
+.recentnav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 58%;
+}
+
+.recentnav span {
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.recentnav a {
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.recent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.box h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.box div {
+    display: flex;
+    gap: 30px;
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.worknav {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    gap: 20px;
+}
+
+.work1 {
+    display: flex;
+    gap: 15px;
+}
+
+.work1 img {
+    width: 246px;
+    height: 180px;
+    border-radius: 6px;
+}
+
+.workinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 10px;
+}
+
+.work1 div h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.work1 div div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 30px;
+}
+
+.work1 div div span:first-child {
+    width: 62px;
+    height: 25px;
+    border-radius: 16px;
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 5px;
+    background-color: #142850;
+    display: flex;
+    justify-content: center;
+}
+
+.work1 div span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.fourth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0px;
+}
+
+.fourth div {
+    display: flex;
+}
+
+.fourth a img {
+    width: 30px;
+    margin: 15px;
+}
+
+@media (max-width:450px) {
+    .nav a {
+        visibility: hidden;
+        width: 0pv;
+        height: 0px;
+    }
+
+    .nav img {
+        visibility: visible;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info h1 {
+        text-align: center;
+    }
+
+    .info p {
+        text-align: center;
+    }
+
+    .recentnav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .recentnav a {
+        visibility: hidden;
+        width: 0px;
+    }
+
+    .recent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .worknav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .work1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work1 img {
+        width: 100%;
+    }
+}
